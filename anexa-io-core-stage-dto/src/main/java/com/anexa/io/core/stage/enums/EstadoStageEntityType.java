@@ -1,0 +1,23 @@
+package com.anexa.io.core.stage.enums;
+
+// @formatter:off
+public enum EstadoStageEntityType {
+	NO_PROCESADO,
+	
+	ERROR_ESTRUCTURA,
+	ESTRUCTURA_VALIDA,
+	CORREGIDO,
+	
+	ERROR_ENRIQUECIMIENTO,
+	ERROR_HOMOLOGACION,
+	HOMOLOGADO,
+
+	ERROR_VALIDACION,
+	VALIDADO,
+
+	ERROR_CARGUE,
+	DETENIDO,
+	DESCARTADO,
+	PROCESADO,
+}
+//@formatter:on
