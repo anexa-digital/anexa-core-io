@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>anexa-io-dto</artifactId>
+	<artifactId>anexa-core-io-stage-commons</artifactId>
 	<packaging>jar</packaging>
 
-	<name>anexa-io-dto</name>
+	<name>anexa-core-io-stage-commons</name>
 	<description></description>
 
 	<parent>
@@ -43,14 +43,25 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-json</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.anexa</groupId>
-			<artifactId>anexa-core-domain</artifactId>
+			<artifactId>anexa-core-services</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.anexa</groupId>
+			<artifactId>anexa-io-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.anexa</groupId>
+			<artifactId>anexa-core-io-stage-dto</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

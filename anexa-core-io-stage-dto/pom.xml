@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>anexa-io-core-stage-dto</artifactId>
+	<artifactId>anexa-core-io-stage-dto</artifactId>
 	<packaging>jar</packaging>
 
-	<name>anexa-io-core-stage-dto</name>
+	<name>anexa-core-io-stage-dto</name>
 	<description></description>
 
 	<parent>
 		<groupId>com.anexa</groupId>
-		<artifactId>anexa-io</artifactId>
+		<artifactId>anexa-core-io</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath> <!-- lookup parent from repository -->
 	</parent>

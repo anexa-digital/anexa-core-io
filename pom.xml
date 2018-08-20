@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.anexa</groupId>
-	<artifactId>anexa-io</artifactId>
+	<artifactId>anexa-core-io</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>anexa-io</name>
+	<name>anexa-core-io</name>
 	<description></description>
 
 	<parent>
@@ -105,9 +105,9 @@
 		</dependencies>
 	</dependencyManagement>
 	<modules>
-		<module>anexa-io-core-stage-commons</module>
-		<module>anexa-io-core-stage-dto</module>
-		<module>anexa-io-domain</module>
-		<module>anexa-io-dto</module>
+		<module>anexa-core-io-stage-commons</module>
+		<module>anexa-core-io-stage-dto</module>
+		<module>anexa-core-io-domain</module>
+		<module>anexa-core-io-dto</module>
 	</modules>
 </project>

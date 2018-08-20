@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>anexa-io-core-stage-commons</artifactId>
+	<artifactId>anexa-core-io-domain</artifactId>
 	<packaging>jar</packaging>
 
-	<name>anexa-io-core-stage-commons</name>
+	<name>anexa-core-io-domain</name>
 	<description></description>
 
 	<parent>
 		<groupId>com.anexa</groupId>
-		<artifactId>anexa-io</artifactId>
+		<artifactId>anexa-core-io</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath> <!-- lookup parent from repository -->
 	</parent>
@@ -43,25 +43,10 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-text</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>com.anexa</groupId>
-			<artifactId>anexa-core-services</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.anexa</groupId>
-			<artifactId>anexa-io-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.anexa</groupId>
-			<artifactId>anexa-io-core-stage-dto</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>anexa-core-data-jpa</artifactId>
 		</dependency>
 	</dependencies>
 </project>
