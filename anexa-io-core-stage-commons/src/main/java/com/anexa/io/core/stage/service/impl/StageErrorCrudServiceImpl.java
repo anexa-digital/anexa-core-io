@@ -1,10 +1,12 @@
 package com.anexa.io.core.stage.service.impl;
 
+import static org.apache.commons.lang3.StringUtils.left;
+
 import java.util.List;
 
-import static org.apache.commons.lang3.StringUtils.left;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import com.anexa.core.services.crud.impl.CrudServiceImpl;
 import com.anexa.io.core.stage.domain.StageError;
@@ -71,20 +73,32 @@ public class StageErrorCrudServiceImpl extends CrudServiceImpl<StageError, Stage
 
 	@Override
 	public List<StageErrorDto> findAllErrorsByIdInAndIntegracion(List<Long> ids, String integracion) {
-		val entities = getRepository().findAllByIntegracionAndIdIn(integracion,ids);
+		val entities = getRepository().findAllByIntegracionAndIdIn(integracion, ids);
 		val result = asModels(entities);
 		return result;
 	}
 
 	@Override
 	public StageErrorDto error(String integracion, String origenId, Throwable t) {
+		String codigo;
+		String mensaje;
+		
+		if (t instanceof HttpStatusCodeException) {
+			val e = (HttpStatusCodeException) t;
+			codigo = e.getMessage();
+			mensaje = e.getResponseBodyAsString();
+		} else {
+			codigo = t.getClass().getSimpleName();
+			mensaje = t.getMessage();
+		}
+
 		// @formatter:off
 		val model = StageErrorDto
 					.builder()
 					.integracion(integracion)
 					.origenId(origenId)
-					.codigo(left(t.getClass().getSimpleName(), 50)) 
-					.mensaje(left(t.getMessage(), 1024))
+					.codigo(left(codigo, 50)) 
+					.mensaje(left(mensaje, 1024))
 					.build();
 
 		// @formatter:on
